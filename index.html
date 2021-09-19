@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Dice</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #3a3a3a;
+        }
+
+        .container{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 200px auto;
+            perspective: 1000px;
+        }
+
+        #cube{
+            width: inherit;
+            height: inherit;            
+            transform-style: preserve-3d;
+            transition: transform 1.5s;
+            animation: spin 10s linear infinite;
+            
+        }
+
+        .box{
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            text-align: center;
+            line-height: 7;
+            opacity: 0.85;
+            font-size: 40px;
+        }
+
+        .box-1{
+            background-color: aqua;
+            transform: translateZ(150px);
+        }
+
+        .box-2{
+            background-color: gray;
+            transform: rotateY(180deg) translateZ(150px);
+            
+        }
+
+        .box-3{
+            background-color: aquamarine;
+            transform: rotateY(90deg) translateZ(150px);
+        }
+
+        .box-4{
+            background-color: bisque;
+            transform: rotateY(-90deg) translateZ(150px);
+            
+          
+        }
+
+        .box-5{
+            background-color: azure;
+            transform: rotateX(90deg) translateZ(150px);
+
+
+        }
+        
+        .box-6{
+            background-color: rgb(173, 132, 211);
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+
+       .show-1 {
+        transform: rotateX(720deg) rotateZ(-720deg);
+        }
+
+        .show-6 {
+        transform: rotateX(-900deg) rotateZ(1080deg);
+        }
+
+        .show-3 {
+        transform: rotateY(-450deg) rotateZ(-1440deg);
+        }
+
+        .show-4 {
+        transform: rotateY(810deg) rotateZ(720deg);
+        }
+
+        .show-5 {
+        transform: rotateX(-810deg) rotateZ(-1080deg);
+        }
+
+        .show-2 {
+        transform: rotateX(450deg) rotateZ(-720deg);
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div id="cube">
+            
+            
+            <div class="box box-1">
+                <span>I</span>
+            </div>
+            <div class="box box-2">
+                <span>II</span>
+            </div>
+            <div class="box box-3">
+                <span>III</span>
+            </div>
+            <div class="box box-4">
+                <span>IV</span>
+            </div>
+            <div class="box box-5">
+                <span>V</span>
+            </div>
+            <div class="box box-6">
+                <span>VI</span>
+            </div>
+
+        </div>
+    </div>
+ 
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
